@@ -19,6 +19,12 @@ spec:
           image: username/request:latest
           ports:
             - containerPort: 8080
+          env:
+            - name: LANGUAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: hello-cm
+                  key: language
           resources:
             limits:
               cpu: 500m
