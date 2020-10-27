@@ -20,11 +20,11 @@ spec:
           ports:
             - containerPort: 8080
           env:
-            - name: LANGUAGE
+            - name: configurl
               valueFrom:
                 configMapKeyRef:
-                  name: hello-cm
-                  key: language
+                  name: apiurl
+                  key: url
           resources:
             limits:
               cpu: 500m
